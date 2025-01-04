@@ -1,5 +1,6 @@
 import type { Config } from "tailwindcss";
 import { black, white } from 'tailwindcss/colors';
+import plugin from 'tailwindcss/plugin';
 
 export default {
   content: [
@@ -12,8 +13,8 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
-        black: black,
-        white: white,
+        black,
+        white,
         yellow: {
           700: '#F5C521',
         },
@@ -48,8 +49,85 @@ export default {
         1: '1',
         2: '2',
         3: '3'
+      },
+      keyframes: {
+        fade: {
+          from: {opacity: "0"},
+          to: {opacity: "1"}
+        },
+        scaleIn: {
+          "0%": {
+            opacity: "0",
+            transform: "scale(0.9)"
+          },
+          "50%": {
+            opacity: "0.3"
+          },
+          "100%": {
+            opacity: "1",
+            transform: "scale(1)"
+          }
+        },
+      },
+      animation: {
+        fade: "fade .5s ease-in-out",
+        scaleIn: "scaleIn .35s ease-in-out",
       }
     },
   },
-  plugins: [],
+  plugins: [
+    plugin(({addComponents, theme, addUtilities}) => {
+      addComponents({
+        ".btn-primary": {
+          backgroundColor: 'primary',
+          color: '#fff',
+          borderRadius: "0.65rem",
+          transition: "background-color, .3s ease-in-out",
+          "&:hover": {
+            backgroundColor: '#ff0009';
+          }
+        },
+
+        ".text-link": {
+          textUnderlineOffset: '4',
+          color: "rgba(255, 255, 255, .9)",
+          transition: 'text-decoration-color .3s ease-in-out',
+          textDecorationLine: "underline",
+          textDecorationColor: "rgba(255, 255, 255, 0.2)",
+          "&:hover": {
+            textDecorationColor: "rgba(255, 255, 255, 0.9)"
+          }
+        },
+
+        ".air-block": {
+          borderRadius: theme('borderRadius.layout'),
+          backgroundColor: theme("colors.gray.800"),
+          color: theme('colors.white'),
+          boxShadow: theme('colors.lg')
+        }
+      }),
+      addUtilities({
+        ".text-shadow": {
+          textShadow: "1px 1px rgba(0, 0, 0, 0.4)"
+        },
+
+        ".outline-border-none": {
+          border: "none",
+          outline: "none",
+        },
+
+        ".flex-center-between": {
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: "center",
+        },
+
+        ".image-like-bg": {
+          objectPosition: 'center',
+          objectFit: 'cover',
+          pointerEvents: 'none'
+        }
+      })
+    })
+  ],
 } satisfies Config;
