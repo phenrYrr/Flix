@@ -15,7 +15,7 @@ export const firstMenu: IMenu = {
 		},
 		{
 			icon: 'MdRefresh',
-			link: '/refresh',
+			link: '/fresh',
 			title: 'Fresh movies',
 		},
 		{

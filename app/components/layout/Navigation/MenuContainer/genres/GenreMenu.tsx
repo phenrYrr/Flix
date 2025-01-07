@@ -1,8 +1,7 @@
-import { FC } from "react";
-import { usePopularGenres } from "./usePopularGenres";
+import { FC } from 'react'
 
 const GenreMenu: FC = () => {
-    const {isLoading, data, error} = usePopularGenres('', () => {
-
-    })
+	return <div>GenreMenu</div>
 }
+
+export default GenreMenu

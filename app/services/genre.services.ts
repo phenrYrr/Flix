@@ -1,7 +1,7 @@
-import axios from "axios"
+// import axios from 'axios'
 
-export const GenreServices = {
-    async getPopularGenres(limit = 4) {
-        await axios.get<IGenre[]>()
-    }
-}
+// export const GenreServices = {
+// 	async getPopularGenres() {
+// 		await axios.get<IGenre[]>()
+// 	},
+// }

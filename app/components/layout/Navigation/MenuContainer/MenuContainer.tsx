@@ -1,6 +1,7 @@
 import { FC } from 'react'
 import Menu from './Menu'
-import { firstMenu, userMenu } from './menu.data'
+import { firstMenu } from './menu.data'
+import { userMenu } from './menu.data'
 
 const MenuContainer: FC = () => {
 	return (
