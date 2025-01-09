@@ -1,4 +1,4 @@
 export interface IHeading {
-    title: string
-    className?: string
+	title: string
+	className?: string
 }

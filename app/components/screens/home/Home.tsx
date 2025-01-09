@@ -10,7 +10,10 @@ const Home: FC<IHome> = () => {
 			title="Watch TV Shows online"
 			description="Watch MovieApp movies and TV shows online or stream right tp your browser."
 		>
-			<Heading title='ALL THE TV YOU LOVE' className="text-gray-500 mb-8 text-xl"/>
+			<Heading
+				title="ALL THE TV YOU LOVE"
+				className="text-gray-500 mb-8 text-xl"
+			/>
 		</Meta>
 	)
 }
