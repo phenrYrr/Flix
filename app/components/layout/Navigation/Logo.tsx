@@ -5,16 +5,18 @@ import logoImage from '@/assets/images/logo.svg'
 
 const Logo: FC = () => {
 	return (
-		<Link href={'/'} className="px-layout mb-10 block">
+		<div className="px-layout mb-10 block">
+			<Link href={'/'}>
 			<Image
 				src={logoImage}
-				width={160}
-				height={60}
+				width={140}
+				height={40}
 				alt="Online cinema"
 				draggable={false}
 				priority
 			/>
 		</Link>
+		</div>
 	)
 }
 

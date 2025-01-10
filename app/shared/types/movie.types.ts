@@ -1,11 +1,8 @@
 import { TypeMaterialIcons } from './icon.types'
 
-export interface IGenre {
-	_id: string
+export interface IList {
 	name: string
 	slug: string
-	description: string
-	icon: TypeMaterialIcons
 }
 
 export interface IParameters {
@@ -15,11 +12,15 @@ export interface IParameters {
 }
 
 export interface IActor {
-	_id: string
-	photo: string
-	name: string
-	countMovies: number
-	slug: string
+	id: number,
+  name: string,
+  enName: string,
+  photo: string,
+  sex: string,
+  growth: number,
+  birthday: string,
+  death: string,
+  age: number,
 }
 
 export interface IMovie {
@@ -28,7 +29,7 @@ export interface IMovie {
 	bigPoster: string
 	title: string
 	parameters: IParameters
-	genres: IGenre[]
+	genres: IList[]
 	actors: IActor[]
 	countOpened: number
 	videoUrl: string

@@ -1,7 +1,9 @@
-// import axios from 'axios'
+import axios from 'axios'
+import { API_URL, getListUrl } from '@/config/api.config'
+import { IList } from '@/shared/types/movie.types'
 
-// export const GenreServices = {
-// 	async getPopularGenres() {
-// 		await axios.get<IGenre[]>()
-// 	},
-// }
+export const ListInfoServices = {
+	async getListInfo() {
+		await axios.get<IList[]>(getListUrl(`${API_URL}v1/movie/possible-values-by-field`))
+	},
+}

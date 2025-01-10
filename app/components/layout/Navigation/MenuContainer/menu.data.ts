@@ -1,3 +1,4 @@
+import { link } from 'fs'
 import { IMenu } from './menu.interface'
 
 export const firstMenu: IMenu = {
@@ -24,6 +25,32 @@ export const firstMenu: IMenu = {
 			title: 'Trending now',
 		},
 	],
+}
+
+export const secondMenu: IMenu = {
+	title: "Popular genres",
+	items: [
+		{
+			icon: "MdTagFaces",
+			link: "/comedy",
+			title: "Comedy"
+		},
+		{
+			icon: "MdFamilyRestroom",
+			link: "/cartoons",
+			title: "Cartoons"
+		},
+		{
+			icon: "MdAutoFixHigh",
+			link: "/fantasy",
+			title: "Fantasy"
+		},
+		{
+			icon: 'MdOutlineFace',
+			link: '/biography',
+			title: 'Biography'
+		}
+	]
 }
 
 export const userMenu: IMenu = {
