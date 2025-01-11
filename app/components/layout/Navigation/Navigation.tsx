@@ -1,7 +1,7 @@
-import { FC } from 'react'
-import styles from './Navigation.module.scss'
-import Logo from './Logo'
-import MenuContainer from './MenuContainer/MenuContainer'
+import { FC } from 'react';
+import styles from './Navigation.module.scss';
+import Logo from './Logo';
+import MenuContainer from './MenuContainer/MenuContainer';
 
 const Navigation: FC = () => {
 	return (
@@ -9,7 +9,7 @@ const Navigation: FC = () => {
 			<Logo />
 			<MenuContainer />
 		</div>
-	)
-}
+	);
+};
 
-export default Navigation
+export default Navigation;

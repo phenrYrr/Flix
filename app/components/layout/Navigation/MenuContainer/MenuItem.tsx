@@ -1,14 +1,14 @@
-import cn from 'classnames'
-import Link from 'next/link'
-import { useRouter } from 'next/router'
-import { FC } from 'react'
-import MaterialIcon from '@/components/ui/MaterialIcon'
-import styles from './Menu.module.scss'
-import { IMenuItem } from './menu.interface'
-import { TypeMaterialIcons } from '@/shared/types/icon.types'
+import cn from 'classnames';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
+import { FC } from 'react';
+import MaterialIcon from '@/components/ui/MaterialIcon';
+import styles from './Menu.module.scss';
+import { IMenuItem } from './menu.interface';
+import { TypeMaterialIcons } from '@/shared/types/icon.types';
 
 const MenuItem: FC<{ item: IMenuItem }> = ({ item }) => {
-	const { asPath } = useRouter()
+	const { asPath } = useRouter();
 
 	return (
 		<li
@@ -21,7 +21,7 @@ const MenuItem: FC<{ item: IMenuItem }> = ({ item }) => {
 				<span>{item.title}</span>
 			</Link>
 		</li>
-	)
-}
+	);
+};
 
-export default MenuItem
+export default MenuItem;

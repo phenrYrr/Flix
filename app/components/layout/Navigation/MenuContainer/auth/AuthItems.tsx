@@ -1,7 +1,7 @@
-import { FC } from 'react'
+import { FC } from 'react';
 
 const AuthItems: FC = () => {
-	return <div>AuthItems</div>
-}
+	return <div>AuthItems</div>;
+};
 
-export default AuthItems
+export default AuthItems;

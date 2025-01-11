@@ -1,14 +1,15 @@
-import { FC } from 'react'
-import { IHeading } from './heading.interface'
+import { FC } from 'react';
+import { IHeading } from './heading.interface';
+import styles from './Heading.module.scss';
 
 const Heading: FC<IHeading> = ({ title, className }) => {
 	return (
 		<h1
-			className={`text-white text-opacity-80 font-semibold ${className?.includes('xl') ? '' : 'text-3xl'}`}
+			className={`${styles.heading} ${className?.includes('xl') ? '' : 'text-3xl'}`}
 		>
 			{title}
 		</h1>
-	)
-}
+	);
+};
 
-export default Heading
+export default Heading;

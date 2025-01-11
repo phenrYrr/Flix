@@ -1,10 +1,10 @@
 export interface IMenuItem {
-	icon: string
-	link: string
-	title: string
+	icon: string;
+	link: string;
+	title: string;
 }
 
 export interface IMenu {
-	title: string
-	items: IMenuItem[]
+	title: string;
+	items: IMenuItem[];
 }

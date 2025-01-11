@@ -1,7 +1,7 @@
-import { FC } from 'react'
+import { FC } from 'react';
 
 const GenreMenu: FC = () => {
-	return <div>GenreMenu</div>
-}
+	return <div>GenreMenu</div>;
+};
 
-export default GenreMenu
+export default GenreMenu;

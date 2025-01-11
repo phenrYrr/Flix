@@ -1,8 +1,8 @@
-import type { Config } from 'tailwindcss'
-import { black, white } from 'tailwindcss/colors'
-import plugin from 'tailwindcss/plugin'
+import type { Config } from 'tailwindcss';
+import { black, white } from 'tailwindcss/colors';
+import plugin from 'tailwindcss/plugin';
 
-const primary = '#E30B13'
+const primary = '#E30B13';
 
 export default {
 	content: [
@@ -130,7 +130,7 @@ export default {
 						objectFit: 'cover',
 						pointerEvents: 'none',
 					},
-				})
+				});
 		}),
 	],
-} satisfies Config
+} satisfies Config;

@@ -1,7 +1,7 @@
-import { FC } from 'react'
-import Menu from './Menu'
-import { firstMenu, secondMenu } from './menu.data'
-import { userMenu } from './menu.data'
+import { FC } from 'react';
+import Menu from './Menu';
+import { firstMenu, secondMenu } from './menu.data';
+import { userMenu } from './menu.data';
 
 const MenuContainer: FC = () => {
 	return (
@@ -10,7 +10,7 @@ const MenuContainer: FC = () => {
 			<Menu menu={secondMenu} />
 			<Menu menu={userMenu} />
 		</div>
-	)
-}
+	);
+};
 
-export default MenuContainer
+export default MenuContainer;

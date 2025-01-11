@@ -1,4 +1,4 @@
-import type { NextConfig } from 'next'
+import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
 	poweredByHeader: false,
@@ -6,6 +6,6 @@ const nextConfig: NextConfig = {
 		API_URL: process.env.REACT_MOVIES_API_URL,
 		API_KEY: process.env.REACT_MOVIES_API_KEY,
 	},
-}
+};
 
-export default nextConfig
+export default nextConfig;

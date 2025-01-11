@@ -1,23 +1,25 @@
-import Link from 'next/link'
-import { FC } from 'react'
-import Image from 'next/image'
-import logoImage from '@/assets/images/logo.svg'
+import Link from 'next/link';
+import { FC } from 'react';
+import Image from 'next/image';
+import logoImage from '@/assets/images/logo.svg';
+import styles from './Logo.module.scss';
 
 const Logo: FC = () => {
 	return (
-		<div className="px-layout mb-10 block">
-			<Link href={'/'}>
+		<Link
+			href={'/'}
+			className={styles.logo}
+		>
 			<Image
 				src={logoImage}
-				width={140}
-				height={40}
+				width={120}
+				height={60}
 				alt="Online cinema"
 				draggable={false}
 				priority
 			/>
 		</Link>
-		</div>
-	)
-}
+	);
+};
 
-export default Logo
+export default Logo;

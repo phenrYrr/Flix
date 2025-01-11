@@ -1,8 +1,8 @@
-import Layout from '@/components/layout/Layout'
-import { FC } from 'react'
-import { IHome } from './home.interface'
-import Meta from '@/utils/meta/Meta'
-import Heading from '@/components/ui/heading/Heading'
+import { FC } from 'react';
+import { IHome } from './home.interface';
+import Meta from '@/utils/meta/Meta';
+import Heading from '@/components/ui/heading/Heading';
+import styles from './Home.module.scss';
 
 const Home: FC<IHome> = () => {
 	return (
@@ -12,10 +12,10 @@ const Home: FC<IHome> = () => {
 		>
 			<Heading
 				title="ALL THE TV YOU LOVE"
-				className="text-gray-500 mb-8 text-xl"
+				className={styles.home}
 			/>
 		</Meta>
-	)
-}
+	);
+};
 
-export default Home
+export default Home;
