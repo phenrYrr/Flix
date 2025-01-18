@@ -10,14 +10,14 @@ const SearchList: FC<{ movies: IMovie[] }> = ({ movies }) => {
 		<div className={styles.list}>
 			{movies.map((movie) => (
 				<Link
-					key={movie._id}
+					key={movie.id}
 					href={getMovieUrl(movie.slug)}
 				>
 					<Image
-						src={movie.poster}
+						src={movie.poster.previewUrl}
 						width={50}
 						height={50}
-						alt={movie.title}
+						alt={movie.name || movie.alternativeName}
 						objectFit="cover"
 						objectPosition="top"
 						draggable={false}

@@ -1,11 +1,13 @@
 import { FC } from 'react';
 import styles from './Sidebar.module.scss';
-import SearchField from '@/components/ui/search-field/SearchField';
+import MoviesContainer from './MoviesContainer/MoviesContainer';
+import Search from './Search/Search';
 
 const Sidebar: FC = () => {
 	return (
 		<div className={styles.sidebar}>
-			<SearchField />
+			<Search />
+			<MoviesContainer />
 		</div>
 	);
 };

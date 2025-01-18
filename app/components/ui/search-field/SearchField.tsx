@@ -3,11 +3,11 @@ import MaterialIcon from '../MaterialIcon';
 import styles from './SearchField.module.scss';
 
 interface ISearchField {
-	searchTerm?: string
-	handleSearch: (e: ChangeEvent<HTMLInputElement>) => void
+	searchTerm?: string;
+	handleSearch: (e: ChangeEvent<HTMLInputElement>) => void;
 }
 
-const SearchField: FC<ISearchField> = ({handleSearch, searchTerm}) => {
+const SearchField: FC<ISearchField> = ({ handleSearch, searchTerm }) => {
 	return (
 		<div className={styles.search}>
 			<MaterialIcon name="MdSearch" />
