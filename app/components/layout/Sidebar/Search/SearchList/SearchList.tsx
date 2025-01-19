@@ -11,7 +11,7 @@ const SearchList: FC<{ movies: IMovie[] }> = ({ movies }) => {
 			{movies.map((movie) => (
 				<Link
 					key={movie.id}
-					href={getMovieUrl(movie.slug)}
+					href={`movie/${movie.slug}`}
 				>
 					<Image
 						src={movie.poster.previewUrl}
@@ -23,7 +23,8 @@ const SearchList: FC<{ movies: IMovie[] }> = ({ movies }) => {
 						draggable={false}
 					/>
 				</Link>
-			))}
+			))}{' '}
+			: (<div>Movies not found!</div>)
 		</div>
 	);
 };

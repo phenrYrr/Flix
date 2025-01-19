@@ -3,12 +3,10 @@ import { axiosClassic } from 'api/interceptors';
 import { getActorsUrl, getMoviesUrl } from '@/config/api.config';
 
 export const MovieServices = {
-	async getAll() {
-		const { data: actors } = await axiosClassic.get<IActor[]>(
-			getActorsUrl(''),
-		);
-
-		return actors;
+	async getAll(searchTerm?: string) {
+		return axiosClassic.get<IMovie[]>(getMoviesUrl(''), {
+			params: searchTerm ? { searchTerm } : {},
+		});
 	},
 
 	async getMostPopularMovies() {
